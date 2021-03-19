@@ -100,8 +100,11 @@ export type PermissionChecker<
   TArgs extends any[],
   TPerm extends PermissionInstanceType
 > = {
+  /** Perform a simple permission check, returning null if permission is denied. */
   test(...args: TArgs): TPerm | null;
+  /** Check for permission and return any data related to why permission was denied. */
   check(...args: TArgs): TPerm | Denial;
+  /** Check for permission and throw a PermissionError if permission was denied */
   enforce(...args: TArgs): TPerm;
 };
 

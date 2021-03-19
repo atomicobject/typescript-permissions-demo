@@ -3,9 +3,7 @@ import { Permission, PermissionInstanceType } from "./permissions";
 // Example app permissions.
 
 /** Grants permission to "change system settings". This is all-or-nothing access, with no further granularity. A 'unit' permission */
-export const PermissionToChangeSystemSettings = Permission.declare(
-  "ChangeSystemSettings"
-);
+export const PermissionToChangeSystemSettings = Permission.declare( "ChangeSystemSettings");
 export type PermissionToChangeSystemSettings = PermissionInstanceType<
   typeof PermissionToChangeSystemSettings
 >;
@@ -58,7 +56,7 @@ class Authorizer {
 // Service layer / business logic layer
 function updateSystemSettings(
   permission: PermissionToChangeSystemSettings,
-  newSettings: any
+  newSettings: SystemSettings
 ) {
   //....
 }
