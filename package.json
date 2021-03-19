@@ -1,0 +1,10 @@
+{
+  "name": "typescript-permissions-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Drew Colthorp <colthorp@atomicobject.com>",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^4.2.3"
+  }
+}
